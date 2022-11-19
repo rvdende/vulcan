@@ -27,9 +27,9 @@ export default function HeroHeader(props: {
   pitchtext: string
 }) {
   return (
-    <div className="relative overflow-hidden bg-gray-800">
-
-      <div className="relative pt-6 pb-16 sm:pb-24">
+    <div className="relative overflow-hidden bg-gray-800 pb-6">
+      
+      <div className="relative pt-6 pb-4">
 
 
         <main className="mt-4 sm:mt-6">

@@ -9,6 +9,10 @@ import Footer from "components/footer";
 import HeroHeader from "components/heroheader";
 import AlertTop from "components/alertTop";
 import NavBar from "components/navbar";
+import MarketingServices from "components/marketingServices";
+
+// marketing services
+import { BuildingOfficeIcon, UserGroupIcon, BriefcaseIcon } from '@heroicons/react/24/outline'
 
 const Home: NextPage = () => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
@@ -32,6 +36,7 @@ const Home: NextPage = () => {
         }}
       />
 
+
       <NavBar navigation={[
         { name: 'Home', href: '#', current: true },
         { name: 'Expertise', href: '#', current: false },
@@ -46,8 +51,34 @@ const Home: NextPage = () => {
         pitchtext="Leading edge software product development services through all stages of production."
       />
 
+      <MarketingServices
+        heading="Our Services"
+        subheading="Partner with Vulcan Labs and Get It Done!"
+        content={[
+          {
+            name: 'Custom Development',
+            href: '#',
+            description:
+              'Bespoke software development for your project from inception to production.',
+            icon: BuildingOfficeIcon,
+          },
+          {
+            name: 'Dedicated Team',
+            href: '#',
+            description:
+              'We provide a dedicated team at your service to rapidly build solutions and add value.',
+            icon: UserGroupIcon,
+          },
+          {
+            name: 'Specialist IT Resourcing',
+            href: '#',
+            description:
+              'We provide specialist IT skillsets to supplement your existing development team.',
+            icon: BriefcaseIcon,
+          },
+        ]}
+      />
 
-      
 
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-slate-800 to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
@@ -85,6 +116,8 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
+
+
 
       <MarketingGrid />
 
