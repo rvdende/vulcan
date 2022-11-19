@@ -51,8 +51,8 @@ export default function NavBar(props: {
                                         alt="Vulcan Labs"
                                         src="/logo_White115H_X_758W.png"
                                         className=''
-                                        width={758/7}
-                                        height={115/7}
+                                        width={758 / 7}
+                                        height={115 / 7}
                                     />
                                 </div>
                             </div>
@@ -87,18 +87,18 @@ export default function NavBar(props: {
                                 </Disclosure.Button>
                             </div>
                             <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
-                                <button
+                                {/* <button
                                     type="button"
                                     className="flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                                 >
                                     <span className="sr-only">View notifications</span>
                                     <BellIcon className="h-6 w-6" aria-hidden="true" />
-                                </button>
+                                </button> */}
 
 
 
                                 {/* Profile dropdown */}
-                                <Menu as="div" className="relative ml-4 flex-shrink-0 mr-4">
+                                {/* <Menu as="div" className="relative ml-4 flex-shrink-0 mr-4">
                                     <div>
                                         <Menu.Button className="flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                             <span className="sr-only">Open user menu</span>
@@ -136,11 +136,23 @@ export default function NavBar(props: {
                                             ))}
                                         </Menu.Items>
                                     </Transition>
-                                </Menu>
+                                </Menu> */}
 
                                 <button
                                     type="submit"
-                                    className="flex w-full justify-center rounded-md border border-transparent bg-rose-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 p-1 mr-4"
+                                    className="flex whitespace-nowrap w-full justify-center rounded-md border border-slate-500 
+                                    
+                                     
+                                    py-2 px-4 text-sm font-medium text-white shadow-sm hover:border-rose-700 focus:outline-none 
+                                    focus:ring-1 focus:ring-rose-600 p-1 mr-4 transition-all"
+
+                                >
+                                    Log in
+                                </button>
+
+                                <button
+                                    type="submit"
+                                    className="flex whitespace-nowrap w-full justify-center rounded-md border border-transparent bg-rose-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 p-1 mr-4"
 
                                 >
                                     Get Started
