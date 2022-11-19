@@ -4,8 +4,9 @@ import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 import { trpc } from "../utils/trpc";
-import SignInHero from "components/with_sign_in_form";
 import MarketingGrid from "components/grid_with_offset_icons";
+import SignInHero from "components/marketing/sections/heroes/with_sign_in_form";
+import HeroAngledOnRight from "components/marketing/sections/heroes/with_angled_image_on_right";
 
 const Home: NextPage = () => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
@@ -18,6 +19,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
+
       <SignInHero navigation={[
         { name: 'Home', href: '#' },
         { name: 'Expertise', href: '#' },
@@ -26,6 +29,8 @@ const Home: NextPage = () => {
         { name: 'About', href: '#' },
         { name: 'Careers', href: '#' },
       ]} />
+
+<HeroAngledOnRight />
 
       <MarketingGrid />
 

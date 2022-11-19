@@ -17,7 +17,12 @@ import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
-
+const navigation = [
+  { name: 'Product', href: '#' },
+  { name: 'Features', href: '#' },
+  { name: 'Marketplace', href: '#' },
+  { name: 'Company', href: '#' },
+]
 
 export default function SignInHero(props: { navigation: { name: string, href: string }[] }) {
   return (
@@ -69,7 +74,7 @@ export default function SignInHero(props: { navigation: { name: string, href: st
                 </div>
               </div>
               <div className="hidden space-x-10 md:ml-10 md:flex">
-                {props.navigation.map((item) => (
+                {navigation.map((item) => (
                   <a key={item.name} href={item.href} className="font-medium text-white hover:text-gray-300">
                     {item.name}
                   </a>
@@ -116,7 +121,7 @@ export default function SignInHero(props: { navigation: { name: string, href: st
                   </div>
                 </div>
                 <div className="space-y-1 px-2 pt-2 pb-3">
-                  {props.navigation.map((item) => (
+                  {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
