@@ -12,10 +12,8 @@
   }
   ```
 */
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 // const navigation = [
 //   { name: 'Product', href: '#' },
@@ -44,7 +42,7 @@ export default function HeroHeader(props: {
                     className="inline-flex items-center rounded-full bg-gray-900 p-1 pr-2 text-white hover:text-gray-200 sm:text-base lg:text-sm xl:text-base"
                   >
                     <span className="rounded-full bg-rose-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white">
-                      We're hiring
+                      We&apos;re hiring
                     </span>
                     <span className="ml-4 text-sm">Visit our careers page</span>
                     <ChevronRightIcon className="ml-2 h-5 w-5 text-gray-500" aria-hidden="true" />
@@ -59,24 +57,30 @@ export default function HeroHeader(props: {
                   <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
                     <div className="flex flex-wrap items-start justify-between">
                       <div className="flex justify-center px-1">
-                        <img
+                        <Image
                           className="h-9 sm:h-10"
                           src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
                           alt="Tuple"
+                          width={105}
+                          height={48}
                         />
                       </div>
                       <div className="flex justify-center px-1">
-                        <img
+                        <Image
                           className="h-9 sm:h-10"
                           src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
                           alt="Workcation"
+                          width={105}
+                          height={48}
                         />
                       </div>
                       <div className="flex justify-center px-1">
-                        <img
+                        <Image
                           className="h-9 sm:h-10"
                           src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
                           alt="StaticKit"
+                          width={105}
+                          height={48}
                         />
                       </div>
                     </div>

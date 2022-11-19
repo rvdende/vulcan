@@ -16,6 +16,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 const user = {
     name: 'Tom Cook',
@@ -23,19 +24,14 @@ const user = {
     imageUrl:
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
-const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
-]
+
 const userNavigation = [
     { name: 'Your Profile', href: '#' },
     { name: 'Settings', href: '#' },
     { name: 'Sign out', href: '#' },
 ]
 
-function classNames(...classes: any) {
+function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
@@ -51,11 +47,13 @@ export default function NavBar(props: {
                         <div className="relative flex h-16 justify-between">
                             <div className="relative z-10 flex px-2 lg:px-0">
                                 <div className="flex flex-shrink-0 items-center">
-
-                                    <img src="/logo_White115H_X_758W.png"
-                                        className='h-5'
+                                    <Image
+                                        alt="Vulcan Labs"
+                                        src="/logo_White115H_X_758W.png"
+                                        className=''
+                                        width={758/7}
+                                        height={115/7}
                                     />
-
                                 </div>
                             </div>
                             <div className="relative z-0 flex flex-1 items-center justify-center px-2 sm:absolute sm:inset-0">
@@ -104,7 +102,10 @@ export default function NavBar(props: {
                                     <div>
                                         <Menu.Button className="flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                             <span className="sr-only">Open user menu</span>
-                                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                                            <Image className="h-8 w-8 rounded-full"
+                                                width={256}
+                                                height={256}
+                                                src={user.imageUrl} alt="" />
                                         </Menu.Button>
                                     </div>
 
@@ -184,7 +185,7 @@ export default function NavBar(props: {
                         <div className="border-t border-gray-700 pt-4 pb-3">
                             <div className="flex items-center px-4">
                                 <div className="flex-shrink-0">
-                                    <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                                    <Image className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
                                 </div>
                                 <div className="ml-3">
                                     <div className="text-base font-medium text-white">{user.name}</div>
