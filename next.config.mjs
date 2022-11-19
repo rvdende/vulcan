@@ -19,13 +19,13 @@ const config = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
-        port: '443',
+        port: '',
         pathname: '/photo**',
       },
       {
         protocol: 'https',
         hostname: 'tailwindui.com',
-        port: '443',
+        port: '',
         pathname: '/img/logos/**',
       },
     ],
