@@ -16,6 +16,7 @@ import { BuildingOfficeIcon, UserGroupIcon, BriefcaseIcon } from '@heroicons/rea
 
 const Home: NextPage = () => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
+  const test = trpc.actionplans.test.useQuery({ text: "blah" });
 
   return (
     <>
@@ -36,6 +37,11 @@ const Home: NextPage = () => {
         }}
       />
 
+        {/* <div>
+          <pre>
+          {JSON.stringify(test, null, 2)}
+          </pre>
+        </div> */}
 
       <NavBar navigation={[
         { name: 'Home', href: '#', current: true },
