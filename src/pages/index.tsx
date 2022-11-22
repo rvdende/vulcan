@@ -16,7 +16,7 @@ import { BuildingOfficeIcon, UserGroupIcon, BriefcaseIcon } from '@heroicons/rea
 
 const Home: NextPage = () => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
-  const test = trpc.actionplans.test.useQuery({ text: "blah" });
+  // const test = trpc.actionplans.test.useQuery({ text: "blah" });
 
   return (
     <>

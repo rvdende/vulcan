@@ -14,12 +14,10 @@ export default function AlertTop(props: {
 }) {
   const [hidden, hide] = useState(false);
 
-  // let translateY = `-translate-y-${ hidden ? 12 : 10}`
-  let translateY = '';
 
   return (
     <div className='bg-slate-800 h-12'>
-      <div className={classNames(`absolute top-0 left-0 right-0 bg-slate-900 transition-all shadow-2xl duration-500 ${translateY}`)}
+      <div className={classNames(`absolute top-0 left-0 right-0 bg-slate-900 transition-all shadow-2xl duration-500`)}
         style={{ translate: `0 ${hidden ? -12 : 0}rem` }}
       >
         <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">

@@ -1,6 +1,6 @@
-import { Session } from "next-auth"
+import type { Session } from "next-auth"
 import Image from 'next/image'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { BellIcon } from '@heroicons/react/24/outline'
 
 export const NavbarMobileUser = (props: {
     sessionData: Session | null

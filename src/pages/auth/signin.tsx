@@ -8,9 +8,8 @@ import {
     signIn
 } from "next-auth/react"
 
-import { ElementType, Fragment, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/24/outline'
 import Home from '../../pages/index'
 import { useRouter } from "next/router";
 
