@@ -21,6 +21,7 @@ import { trpc } from 'utils/trpc'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { classNames } from './classNames'
 import SessionAvatar from './sessionAvatar'
+import { NavbarMobileUser } from './navbar_mobile_user'
 
 const user = {
     name: 'Tom Cook',
@@ -51,13 +52,13 @@ export default function NavBar(props: {
                     <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-700 lg:px-8">
                         <div className="relative flex h-16 justify-between">
                             <div className="relative z-10 flex px-2 lg:px-0">
-                                <div className="flex flex-shrink-0 items-center">
+                                <div className="flex flex-shrink-0 items-center cursor-pointer hover:opacity-90 relative">
                                     <Image
                                         alt="Vulcan Labs"
                                         src="/logo_White115H_X_758W.png"
-                                        className=''
-                                        width={758 / 7}
-                                        height={115 / 7}
+                                        className="transition duration-300 hover:drop-shadow-[0_0px_8px_rgba(200,255,255,0.5)]"
+                                        width={758 / 6}
+                                        height={115 / 6}
                                     />
                                 </div>
                             </div>
@@ -103,9 +104,9 @@ export default function NavBar(props: {
 
 
                                 {/* Profile dropdown */}
-                                <SessionAvatar 
-                                  sessionData={sessionData}
-                                  userNavigation={userNavigation}
+                                <SessionAvatar
+                                    sessionData={sessionData}
+                                    userNavigation={userNavigation}
                                 />
 
                                 {sessionData ? <button
@@ -149,7 +150,7 @@ export default function NavBar(props: {
                         </nav>
                     </div>
 
-                    <Disclosure.Panel as="nav" className="lg:hidden" aria-label="Global">
+                    <Disclosure.Panel as="nav" className="lg:hidden bg-slate-900 mx-4 rounded-lg" aria-label="Global">
                         <div className="space-y-1 px-2 pt-2 pb-3">
                             {navigation.map((item) => (
                                 <Disclosure.Button
@@ -167,22 +168,7 @@ export default function NavBar(props: {
                             ))}
                         </div>
                         <div className="border-t border-gray-700 pt-4 pb-3">
-                            <div className="flex items-center px-4">
-                                <div className="flex-shrink-0">
-                                    <Image className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
-                                </div>
-                                <div className="ml-3">
-                                    <div className="text-base font-medium text-white">{user.name}</div>
-                                    <div className="text-sm font-medium text-gray-400">{user.email}</div>
-                                </div>
-                                <button
-                                    type="button"
-                                    className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                >
-                                    <span className="sr-only">View notifications</span>
-                                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                                </button>
-                            </div>
+                            <NavbarMobileUser sessionData={sessionData} />
                             <div className="mt-3 space-y-1 px-2">
                                 {userNavigation.map((item) => (
                                     <Disclosure.Button
