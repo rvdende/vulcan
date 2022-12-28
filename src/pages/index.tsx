@@ -1,14 +1,9 @@
 import { type NextPage } from "next";
-import Head from "next/head";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
 
-import { trpc } from "../utils/trpc";
 import MarketingGrid from "components/grid_with_offset_icons";
 import Footer from "components/footer";
 import HeroHeader from "components/heroheader";
-import AlertTop from "components/alertTop";
-import NavBar from "components/navbar";
 import MarketingServices from "components/marketingServices";
 
 // marketing services

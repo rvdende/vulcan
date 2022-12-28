@@ -145,8 +145,8 @@ export default function NavBar(props: { navigation: NavItem[] }) {
               className="hidden lg:flex lg:space-x-8 lg:py-2"
               aria-label="Global"
             >
-              {navigation.map((item) => (
-                <FlyOutMenu item={item} />
+              {navigation.map((item, id) => (
+                <FlyOutMenu key={id} item={item} />
 
                 // <a
                 //   key={item.name}
@@ -234,7 +234,9 @@ function FlyOutMenu(props: { item: NavItem }) {
     <Popover className="relative">
       {({ open }) => (
         <>
-          <Popover.Button className={classNames()}>
+          <Popover.Button
+            className={classNames(open ? "text-white" : "")}
+          >
             {RenderButton()}
           </Popover.Button>
 
