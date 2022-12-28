@@ -22,7 +22,7 @@ export function Layout({ children }: { children: ReactNode }) {
           sizes="192x192"
         />
       </Head>
-      <main>
+      <main className="bg-slate-800">
         <AlertTop
           buttonText="Learn more"
           href="/"
