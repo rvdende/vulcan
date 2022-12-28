@@ -24,6 +24,8 @@ import { classNames } from "./classNames";
 import SessionAvatar from "./sessionAvatar";
 import { NavbarMobileUser } from "./navbar_mobile_user";
 
+import { useState, useEffect } from "react";
+
 const userNavigation = [
   { name: "Your Profile", href: "#" },
   { name: "Settings", href: "#" },
@@ -38,8 +40,15 @@ export interface NavItem {
 
 export default function NavBar(props: { navigation: NavItem[] }) {
   const navigation = props.navigation;
-
   const { data: sessionData } = useSession();
+
+  const [loaded, loaded_set] = useState(false);
+
+  useEffect(() => {
+    loaded_set(true);
+  }, []);
+
+  if (!loaded) return <div>loading...</div>;
 
   return (
     <Disclosure as="header" className="bg-gray-800 pt-4">
