@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    h1 {
+        @apply text-2xl font-bold
+    }
+
+    button {
+        @apply bg-gray-600 p-2 rounded cursor-pointer hover:bg-gray-400
+    }
+
+}
+
+@layer components {
+    .fancybutton {
+     @apply bg-cyan-500/50 px-2 py-4 text-center rounded-lg shadow-lg shadow-white mb-10 md:bg-blue-500
+    }
+}

@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 export default function MarketingServices(props: {
     heading: string
@@ -28,7 +29,7 @@ export default function MarketingServices(props: {
             >
                 <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8 auto-rows-max ">
                     {props.content.map((link) => (
-                        <a key={link.name} href={link.href}>
+                        <Link key={link.name} href={link.href}>
                             <div className="flex flex-col rounded-2xl overflow-hidden transition-all bg-white
                              border border-teal-700 shadow-xl 
                              hover:bg-cyan-100 
@@ -52,7 +53,7 @@ export default function MarketingServices(props: {
 
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </section>

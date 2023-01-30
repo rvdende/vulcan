@@ -38,14 +38,14 @@ export function Layout({ children }: { children: ReactNode }) {
             { name: "Expertise", href: "#" },
             {
               name: "Services",
-              href: "#",
+              href: "/services",
               subnav: [
-                { name: "Custom Development", href: "/services/customdev" },
+                { name: "Custom Development", href: "/services/development" },
                 {
                   name: "Specialist IT Resourcing",
-                  href: "/services/itresourcing",
+                  href: "/services/resourcing",
                 },
-                { name: "Dedicated Team", href: "/services/dedicatedteam" },
+                { name: "Dedicated Team", href: "/services/dedicated"},
               ],
             },
             { name: "Success Stories", href: "#" },

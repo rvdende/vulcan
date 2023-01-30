@@ -43,7 +43,7 @@ const Home: NextPage = () => {
           },
           {
             name: "Specialist IT Resourcing",
-            href: "#",
+            href: "/resourcing",
             description:
               "We provide specialist IT skillsets to supplement your existing development team.",
             icon: BriefcaseIcon,
