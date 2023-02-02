@@ -51,7 +51,7 @@ const Home: NextPage = () => {
         ]}
       />
 
-      <MarketingGrid />
+      {/* <MarketingGrid /> */}
 
       <Footer />
     </>

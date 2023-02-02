@@ -213,7 +213,7 @@ export default function NavBar(props: { navigation: NavItem[] }) {
 function FlyOutMenu(props: { item: NavItem }) {
   const RenderButton = () => {
     return (
-      <button className="group inline-flex items-center rounded-md p-2 text-base font-medium text-gray-500 outline-red-300 hover:text-gray-200 focus:outline">
+      <button className="group inline-flex items-center rounded-md p-2 text-base font-medium text-gray-300 outline-red-300 hover:text-gray-200 focus:outline">
         <span>{props.item.name}</span>
 
         {props.item.subnav && (
@@ -234,9 +234,7 @@ function FlyOutMenu(props: { item: NavItem }) {
     <Popover className="relative">
       {({ open }) => (
         <>
-          <Popover.Button
-            className={classNames(open ? "text-white" : "")}
-          >
+          <Popover.Button className={classNames(open ? "text-white" : "")}>
             {RenderButton()}
           </Popover.Button>
 
